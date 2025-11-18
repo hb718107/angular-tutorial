@@ -1,0 +1,44 @@
+/* Full width header */
+.header {
+  width: 100%;
+  background: #0d6efd;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar inside the header */
+.navbar {
+  width: 100%;
+  padding: 15px 30px;
+  background: #0d6efd;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;   /* THIS fixes the vertical alignment */
+  box-sizing: border-box;
+}
+/* Logo */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;   /* space between links and button */
+  margin-left: auto;   /* THIS pushes everything to the right */
+}
+
+/* Login Button */
+.login-btn {
+  padding: 8px 20px;
+  background: white;
+  color: #0d6efd;
+  border: none ;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.logo{
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+   font-family: "Concert One", sans-serif;
+}

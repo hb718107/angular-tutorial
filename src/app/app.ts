@@ -1,12 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { TopHeader } from './top-header/top-header';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet,HeaderComponent,TopHeader],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'],
+  standalone:true
 })
 export class App {
-  protected readonly title = signal('angular-ekart');
+   title = 'angular-ekart';
+   imgUrl = signal('assets/123.jpg');
 }
