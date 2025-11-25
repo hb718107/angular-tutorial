@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { Search } from './search/search';
 import { CommonModule } from '@angular/common';
+import { ProductList } from "./product-list/product-list";
 
 @Component({
-  selector: 'product-list',
-  imports: [Search, CommonModule],
-  templateUrl: './product-list.html',
-  styleUrl: './product-list.css',
+  selector: 'container',
+  imports: [Search, CommonModule, ProductList],
+  templateUrl: './container.html',
+  styleUrl: './container.css',
 })
-export class ProductList {
+export class Container {
 
     somenames : string[] = ['tony stark','bruce banner','thor','steve rogers','natasha romanoff','Fury','Odin'];
 //   // user ='john wick'

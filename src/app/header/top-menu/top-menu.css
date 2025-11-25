@@ -5,3 +5,12 @@
     padding-bottom: 15px;
     padding-right: 30px;
 }
+.b{
+    color: black;
+}
+.b:hover{
+    color: white;
+}
+.b:active{
+    color: wheat;
+}

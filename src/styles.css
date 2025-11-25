@@ -15,6 +15,12 @@ a {
   font-size: 16px;
   padding: 10px;
 }
-a :hover{
+.nav-links li a {
   color: black;
+}
+.nav-links li a:hover{
+  color: white;
+}
+.nav-links li a:active{
+  color: wheat
 }

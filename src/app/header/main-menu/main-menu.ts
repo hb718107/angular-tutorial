@@ -9,7 +9,9 @@ import { faUser, faCartShopping,faAtom,faEye,faFaceGrin,faGem,faCreditCard } fro
   styleUrl: './main-menu.css',
 })
 export class MainMenu {
-     icons = {
+     
+  
+  icons = {
     user: faUser,
     cart: faCartShopping,
     Atom: faAtom,

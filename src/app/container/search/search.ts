@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCartShopping,faEye } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping,faEye,faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-search',
-  imports: [FontAwesomeModule,FormsModule],
+  imports: [FontAwesomeModule, FormsModule, CommonModule],
   templateUrl: './search.html',
   styleUrl: './search.css',
 })
 
 export class Search {
-  searchText : string = 'What are you looking for ?'
+  searchText : string = ''
 
   // updateSearchText(event : any){
   //   this.searchText = event.target.value;
@@ -19,7 +20,8 @@ export class Search {
 
   icons ={
     search : faEye,
-    buy:faCartShopping
+    buy:faCartShopping,
+    disabled_search :faEyeSlash
 
   }
 
