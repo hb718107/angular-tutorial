@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Search } from '../search/search';
+import { Product } from './product/product';
+import { Filter } from './filter/filter';
 
 @Component({
   selector: 'product-list',
-  imports: [CommonModule, Search],
+  imports: [CommonModule, Search,Product,Filter],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
 })
@@ -166,5 +168,11 @@ export class ProductList {
       slug: "nike-air-force-1"
     },
   ];
-
+  totalProducts = this.products.length;
+  inStockProducts = this.products.filter(product => product.is_in_inventory === true).length;
+  outOfStockProducts = this.products.filter(product => product.is_in_inventory === false).length;
+  selectedFilterRadioButton: string = 'all';
+  onFilterChange(value:string){
+    this.selectedFilterRadioButton = value;
+}
 }
