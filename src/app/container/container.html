@@ -2,7 +2,8 @@
     <app-search (searchtextchanged)="setSearchText($event)"></app-search>
 </div>
 <div class="prod-list">
-   <product-list [searchText]="searchText"></product-list>
+   <product-list [searchText]="searchText" #selectedProductList></product-list>
+   <product-details *ngIf="selectedProductList.selectedProduct"></product-details>
 </div>
     <!-- <div *ngFor=" let items of somenames">
        <p>Current element of array : {{items}}</p>

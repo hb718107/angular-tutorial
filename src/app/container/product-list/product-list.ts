@@ -7,10 +7,10 @@ import { ProductLister } from '../../Models/Product';
 
 @Component({
   selector: 'product-list',
-  imports: [CommonModule, Search,Product,Filter],
+  imports: [CommonModule, Search ,Product,Filter],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
-  providers: [ProductLister],
+  // providers: [ProductLister],
 })
 export class ProductList {
   selectedProduct: ProductLister;
