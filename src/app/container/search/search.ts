@@ -1,4 +1,4 @@
-import { Component, EventEmitter, input, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, input, Output, ViewChild } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCartShopping,faEye,faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule } from '@angular/forms';
@@ -15,15 +15,18 @@ export class Search {
   searchText : string = ''
   @Output()
   searchtextchanged: EventEmitter<string> = new EventEmitter<string>();
+  // second argument in viewchild is to avoid null errors
+  @ViewChild('searchInput') searchInpulEl : ElementRef;
 
   onSearchTextChanged(){
     this.searchtextchanged.emit(this.searchText);
   }
 
-  updateSearchText(inputElement: HTMLInputElement){
+  updateSearchText(){
     // console.log(inputElement.value);
-    this.searchText = inputElement.value;
-    this.searchtextchanged.emit(this.searchText);
+    this.searchText = this.searchInpulEl.nativeElement.value;
+    this.onSearchTextChanged();
+    
   }
 
   icons ={

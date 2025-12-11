@@ -3,7 +3,7 @@
 </div>
 <div class="prod-list">
    <product-list [searchText]="searchText" #selectedProductList></product-list>
-   <product-details *ngIf="selectedProductList.selectedProduct"></product-details>
+   <product-details *ngIf="selectedProductList.selectedProduct" [productListComp]="productListComponent"></product-details>
 </div>
     <!-- <div *ngFor=" let items of somenames">
        <p>Current element of array : {{items}}</p>
